@@ -1,9 +1,6 @@
-# ComputerScience Duplicate Detection
-This is the repository for code used for the individual paper for the course, Computer Science (academic year 2021/2022), at Erasmus University taught by Flavius Frasincar.
+#### Welcome to the implementation of LSH for duplicate detection in complete-linkage clustering ####
 
-#### Welcome to the implementation of LSH for duplicate detection ####
-
- Hereby is a description of the functions which are foun din each designated file
+Hereby is a description of the functions which are found in each designated file
 The functions are intended to be loaded to replicate the paper.  
 
 I describe the files in order of which they occur when running the code.
