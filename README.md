@@ -7,7 +7,9 @@ This is the repository for code used for the individual paper for the course, Co
 The functions are intended to be loaded to replicate the paper.  
 
 I describe the files in order of which they occur when running the code.
-To implement it, one needs to load the functions in each of the files, and then run the bootstraps in the "Bootstraps" folder. Within the bootstraps folder is another folder in which all information is assembled.
+To implement it, one needs to load the functions in the "functions" folder, and then run the bootstraps in the "Bootstraps" folder. Within the bootstraps folder is another folder in which all information is assembled. 
+
+Next, I explain what the functions in the functions folder do:
 
 #### File 1: Model_Words ####
 The very first step is manipulating the JSON file to make it workable in R. This is done in the file "Extract_Model_Words". A fundamental part of LSH is to come up with binary vector representations. The papers we have studied make use of the title. I use the the feature list and the title to create the model words. Notably, I do not use all features that are available in the dataset. I first analyse which features occur in at least 48% of all the products. This means that I use 30 features from the dataset out of the 351 total features. After identifying the most important features, the values need to be identified. This is done in object feat_value_pair. I further clean these by removing any syntax (?\":.,!) and irrelevant words, such as, "featuresMap.", etc. After obtaining the feat_value_pair, I turn to the titles. The title are cleaned in a similar fashion. Using the features and the titles, the model words are created.
