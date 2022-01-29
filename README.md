@@ -17,8 +17,14 @@ In this file, the test and the train data is created. The train-test split is 63
 #### File 2: Binary_Signature_Matrix ####
 This file contains the procedure of compressing the binary vectors to signature vectors using min-hashing. The vectors are the input for the LSH algorithm. 
 
+<img width="739" alt="Binary matrix" src="https://user-images.githubusercontent.com/81295233/151661824-12df2eb4-2bc8-42e6-a584-9de71afc18b7.png">
+
+
 #### File 3: Dissim_Clust ####
 In this file the following procedure is conducted. LSH is applied on the signature matrix from function "Binary_Signature_Matrix". Signature matrix is divided into bands and each band contains r rows with the following property: n = r * b  where n is the length of the signature matrix, b is the number of bands, r is the number of rows. "t", also  represents the relation between false positives and false negatives in the following fashion: t = (1/b)^(1/r)
+
+<img width="1061" alt="Correct LSH" src="https://user-images.githubusercontent.com/81295233/151661830-029a6f3e-212a-4dda-b285-dfabe49be4c3.png">
+
 
 After creating the dissimilarity matrix, it is used as iput in the agglomerative complete-linkage clustering algorithm. The LSH algorithm is meant to reduce the amount of time that the algorithm. Takes to process the input matrix. The "hclust" function is used and height at which to cut the tree is chosen to be 0.8.
 
