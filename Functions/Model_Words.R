@@ -245,6 +245,10 @@ Extract_Model_Words <- function(JSON){
   cleanp4             <- c()
   cleanp5             <- c()
   cleanp6             <- c()
+  cleanp7             <- c()
+  cleanp8             <- c()
+  cleanp9             <- c()
+  cleanp10            <- c() 
   unique_model_words  <- c()
   cleanp1 <- title_split[!title_split %in% c('\" ', ":","–", "\\\\", '-', '"/', ".", "+")]
   cleanp2 <- gsub(pattern = ('\"'), replacement="", x= as.character(cleanp1))
@@ -252,9 +256,12 @@ Extract_Model_Words <- function(JSON){
   cleanp4 <- tolower(cleanp3)
   cleanp5 <- gsub(pattern = ('inch'), replacement="inches", x= as.character(cleanp4))
   cleanp6 <- gsub(pattern = ( " '"), replacement="inches", x= as.character(cleanp4))
-  cleanp7 <- gsub(pattern = ('diagonal'), replacement="diag.", x= as.character(cleanp4))
-  cleanp8 <- cleanp7[!cleanp7 %in% c("|", "b")]
-  unique_model_words <- unique(tolower(cleanp6))
+  cleanp7 <- gsub(pattern = ('hertz'), replacement="hrtz", x= as.character(cleanp4))
+  cleanp8 <- gsub(pattern = ('hz'), replacement="hrtz", x= as.character(cleanp4))
+  cleanp9 <- gsub(pattern = ('diagonal'), replacement="diag.", x= as.character(cleanp4))
+  cleanp10 <- cleanp9[!cleanp7 %in% c("|", "b")]
+  unique_model_words_lower <- tolower(cleanp10)
+  unique_model_words <- unique(unique_model_words_lower)
   
   # Goal: be able to look through the title to find the brand
   #splittingtitles -> find_title
