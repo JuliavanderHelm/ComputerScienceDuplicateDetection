@@ -31,4 +31,3 @@ After creating the dissimilarity matrix, it is used as iput in the agglomerative
 #### File 6: Bootstrap #### 
 The test and train dataset have been set. Due to some difficulty in the implementation of complete-linkage hierarchical clustering the bootstraps need to be set individually, which is often unwanted, however, unfortunately unavoidable. The bootstraps for all the different values of t are evaluated separately and can be found in the folder "bootstraps". 
 
-I would like to thank Ettina Beiboer for being my programming buddy during the course.
